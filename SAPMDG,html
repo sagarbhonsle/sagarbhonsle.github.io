@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio Details - iPortfolio Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+     <h1 class="sitename">Sagar Bhonsle</h1>
+    </a>
+
+   <div class="social-links text-center">
+  <a href="https://x.com/sagarbhonsle143?s=21" 
+     class="twitter" 
+     title="Twitter / X">
+    <i class="bi bi-twitter-x"></i>
+  </a>
+
+  <a href="https://www.instagram.com/urs_padosi?igsh=MWk3emM4NWcxYzY5cQ%3D%3D&utm_source=qr" 
+     class="instagram" 
+     title="Instagram">
+    <i class="bi bi-instagram"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/in/sagarbhonsle1999" 
+     class="linkedin" 
+     title="LinkedIn">
+    <i class="bi bi-linkedin"></i>
+  </a>
+
+  <a href="https://www.xing.com/profile/Sagar_Bhonsle049683/web_profiles" 
+     class="xing" 
+     title="Xing">
+    <i class="bi bi-twitter-x"></i> <!-- Replace with correct Xing icon if needed -->
+  </a>
+</div>
+
+    <nav id="navmenu" class="navmenu">
+  <ul>
+    <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+    <li><a href="index.html#about"><i class="bi bi-person navicon"></i> About</a></li>
+    <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+    <li><a href="index.html#services"><i class="bi bi-gear navicon"></i> Services</a></li>
+    <li><a href="index.html#whyme"><i class="bi bi-person navicon"></i> Why Me</a></li>
+    <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Current Openings</a></li> <!-- stays on portfolio page -->
+    <li><a href="index.html#testimonials"><i class="bi bi-chat-quote navicon"></i> Testimonials</a></li>
+    <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+  </ul>
+</nav>
+
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Job Details</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Job Details</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/app-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/product-1.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Role</strong>: SAP Project Planning Consultant </li>
+                <li><strong>Client</strong>: Global Consulting Client</li>
+                <li><strong>Project Date</strong>: ASAP</li>
+                <li><strong>Job Type</strong>: Permanent Position </li>
+              </ul>
+            </div> 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+             </div>
+
+<div class="container-fluid">
+  <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300" style="padding-left:0; margin-left:0;">
+   <h2>Job Description – SAP MDG Consultant</h2>
+
+  <h4>Overview</h4>
+  <p>
+    We are looking for an experienced <strong>SAP MDG Consultant</strong> with hands-on <strong>S/4HANA</strong> experience 
+    and strong expertise in master data governance processes, configuration, and implementation. The consultant will ensure 
+    accurate and consistent master data across the enterprise and support overall data quality and compliance initiatives.
+  </p>
+
+  <h4>Key Responsibilities</h4>
+  <ul>
+    <li>Configure and implement SAP MDG solutions for Material, Customer, Vendor, and other master data objects.</li>
+    <li>Conduct workshops with business users to gather master data requirements and define governance rules.</li>
+    <li>Implement validations, workflows, data replication, and approval processes.</li>
+    <li>Perform data quality checks, cleansing, and migration activities.</li>
+    <li>Integrate MDG with SAP modules such as FI, MM, SD, PP, and S/4HANA.</li>
+    <li>Support full-cycle project implementation: blueprinting, realization, testing, go-live, and hypercare.</li>
+    <li>Troubleshoot and resolve MDG-related production issues.</li>
+    <li>Prepare functional specifications for enhancements and custom developments.</li>
+  </ul>
+
+  <h4>Required Skills</h4>
+  <ul>
+    <li>7+ years of SAP MDG experience in S/4HANA environments.</li>
+    <li>Strong hands-on experience in configuration, customization, and implementation.</li>
+    <li>Deep understanding of master data domains (Material, Customer, Vendor).</li>
+    <li>Experience working with workflows, validations, derivations, and data replication.</li>
+    <li>Familiarity with UI modeling, Fiori apps, and data quality tools.</li>
+    <li>Excellent analytical, problem-solving, and communication skills.</li>
+  </ul>
+  </div>
+</div>
+
+ 
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Mr Recruiter</strong> <span>All Rights Reserved - 2026</span></p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">Sagar Bhonsle</a> Distributed by <a href="https://themewagon.com">Github Pages</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
