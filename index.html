@@ -37,81 +37,97 @@
   ======================================================== -->
 </head>
 
-<style>
+  <style>
   .testimonials .swiper-slide {
     height: auto;
     display: flex;
     justify-content: center;
-    padding-bottom: 40px;
+    padding: 20px 0 40px 0;
   }
 
   .testimonials .testimonial-item {
     background-color: #fff;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
-    padding: 25px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+    padding: 40px;
     margin: 10px;
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Horizontal layout */
+    flex-direction: row; 
+    align-items: center; /* Vertical center */
     width: 100%;
-    border-radius: 12px;
-    /* Fixed height to make it look like a rectangle */
-    height: 320px; 
-    border: 1px solid #eee;
+    max-width: 900px; /* Limits width so it doesn't look too stretched */
+    border-radius: 15px;
+    height: 280px; /* Fixed height for a consistent rectangle */
+    gap: 30px; /* Space between photo and text */
+    border: 1px solid #f0f0f0;
   }
 
-  .testimonials .testimonial-item p {
-    flex-grow: 1;
-    font-style: italic;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    overflow-y: auto; /* Adds a scrollbar if the text is too long */
-    padding-right: 5px;
-    color: #444;
-  }
-
-  /* Optional: Style the scrollbar to make it thin */
-  .testimonials .testimonial-item p::-webkit-scrollbar {
-    width: 4px;
-  }
-  .testimonials .testimonial-item p::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 10px;
-  }
-
-  .testimonials .testimonial-footer {
-    display: flex;
-    align-items: center;
-    border-top: 1px solid #f4f4f4;
-    padding-top: 15px;
-    flex-shrink: 0; /* Prevents footer from squishing */
+  /* Container for the image to prevent squeezing */
+  .testimonials .testimonial-img-container {
+    flex-shrink: 0; /* Prevents the photo area from getting smaller */
+    width: 150px;
+    height: 150px;
   }
 
   .testimonials .testimonial-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 15px;
-    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Perfect circle */
+    object-fit: cover; /* Prevents squeezing/stretching */
+    border: 5px solid #f8f9fa;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .testimonials .testimonial-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .testimonials .testimonial-item p {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #444;
+    overflow-y: auto; /* Scrollbar if text is too long for the rectangle */
+    max-height: 120px;
+    padding-right: 10px;
   }
 
   .testimonials .testimonial-item h3 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
     margin: 0;
-    color: #111;
+    color: #007bff;
   }
 
   .testimonials .testimonial-item h4 {
-    font-size: 13px;
+    font-size: 14px;
     color: #777;
-    margin: 0;
+    margin: 5px 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
-  
-  .quote-icon-left, .quote-icon-right {
-    color: #007bff;
-    font-size: 20px;
-    opacity: 0.5;
+
+  /* Responsive: Stack vertically on mobile */
+  @media (max-width: 768px) {
+    .testimonials .testimonial-item {
+      flex-direction: column;
+      height: auto;
+      text-align: center;
+      padding: 30px;
+    }
+    .testimonials .testimonial-img-container {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+    }
+    .testimonials .testimonial-img {
+      width: 120px;
+      height: 120px;
+    }
   }
 </style>
 
@@ -129,15 +145,12 @@
           "loop": true,
           "speed": 600,
           "autoplay": { "delay": 5000 },
-          "slidesPerView": "auto",
+          "slidesPerView": 1, 
+          "spaceBetween": 30,
           "pagination": {
             "el": ".swiper-pagination",
             "type": "bullets",
             "clickable": true
-          },
-          "breakpoints": {
-            "320": { "slidesPerView": 1, "spaceBetween": 20 },
-            "992": { "slidesPerView": 2, "spaceBetween": 30 } 
           }
         }
       </script>
@@ -146,68 +159,34 @@
 
         <div class="swiper-slide">
           <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              Sagar has been a highly responsive and well organized Talent Partner. His proactivness and anticipation of the pitfalls in the process guaranteed keeping the uncertainty in whole talent process really minimum.
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-            <div class="testimonial-footer">
-              <img src="assets/img/testimonials/Maciej.jpg" class="testimonial-img" alt="">
-              <div>
-                <h3>Maciej Zdziarstek</h3>
-                <h4>SAP Project Manager</h4>
-              </div>
+            <div class="testimonial-img-container">
+              <img src="assets/img/testimonials/Maciej.jpg" class="testimonial-img" alt="Maciej">
+            </div>
+            <div class="testimonial-content">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                Sagar has been a highly responsive and well organized Talent Partner. His proactivness and anticipation of the pitfalls in the process guaranteed keeping the uncertainty in whole talent process really minimum.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <h3>Maciej Zdziarstek</h3>
+              <h4>SAP Project Manager</h4>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
           <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              I had the pleasure of working with Sagar, and I can confidently say he is one of the most dedicated and results-driven professionals I’ve met. His ability to quickly understand requirements, build strong relationships, and deliver quality results makes him a true asset to any team.
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-            <div class="testimonial-footer">
-              <img src="assets/img/testimonials/Niranjan.jpg" class="testimonial-img" alt="">
-              <div>
-                <h3>Niranjan</h3>
-                <h4>ERP Recruiter</h4>
-              </div>
+            <div class="testimonial-img-container">
+              <img src="assets/img/testimonials/Niranjan.jpg" class="testimonial-img" alt="Niranjan">
             </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              I’d like to share my positive experience with Sagar as a recruiter. From my interactions with him, it’s clear that he handles his recruiting responsibilities professionally and effectively. He communicates clearly, understands hiring requirements well.
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-            <div class="testimonial-footer">
-              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-              <div>
-                <h3>Victoria Ivanova</h3>
-                <h4>SAP SD Consultant</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <p>
-              <i class="bi bi-quote quote-icon-left"></i>
-              I had the pleasure of interacting with Sagar during my job search, and I can confidently say he is one of the most supportive and proactive recruiters I’ve come across. From our very first conversation, he was responsive, transparent, and genuinely invested in helping me find the right opportunity.
-              <i class="bi bi-quote quote-icon-right"></i>
-            </p>
-            <div class="testimonial-footer">
-              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-              <div>
-                <h3>Pavani Adnala</h3>
-                <h4>SAP Vistex Consultant</h4>
-              </div>
+            <div class="testimonial-content">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                I had the pleasure of working with Sagar, and I can confidently say he is one of the most dedicated and results-driven professionals I’ve met. His ability to quickly understand requirements, build strong relationships, and deliver quality results makes him a true asset to any team.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <h3>Niranjan</h3>
+              <h4>ERP Recruiter</h4>
             </div>
           </div>
         </div>
